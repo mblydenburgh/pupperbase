@@ -1,0 +1,27 @@
+*{
+    text-align: center;
+    margin: auto;
+}
+
+#title{
+    margin-top: 2em;
+}
+
+#header{
+    display: inline-block;
+    width: 100%;
+}
+
+#dogText{
+    margin:10px;
+}
+
+th:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    color: red;
+}
+
+/*.container{
+    background-color: darkgrey;
+}*/

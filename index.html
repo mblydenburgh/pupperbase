@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="pupperApp">
+    <head>
+        <title></title>
+        <!--Local Stylesheet-->
+        <link rel="stylesheet" href="style.css">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <!--Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        <!--restdb.io API Key: ed3327d8ae8171c89b9e81e2b2871f90ae2f0	-->
+    </head>
+    <body>
+        <div ng-controller="mainController" class="container">
+            <!--Title-->
+            <div class="row">
+                <div id="title" class="col-sm-12">
+                    <h1>PupperBase</h1>
+                    <h2>The Database of Pupper Information</h2>
+                    
+                    <div id="header" class="row">
+                        <!--Dropdown for Selecting Dog Info-->
+                        <select>
+                            <option ng-repeat="dog in data">{{ dog.breed }}</option>
+                        </select>
+
+                        <!--<div class="dropdown" class="col-sm-6">
+                            <button class="btn btn-secondary dropdown-toggle"
+                                    type="button"
+                                    id="dogDropdown">
+                            </button>
+                        </div>-->
+                        <!--Text Box for Searching Dog Info-->
+                        <div class="text col-sm-6">
+                            <p>Type to search by breed, click on column headers to sort.</p>
+                            <input type="text"
+                            id="dogText"
+                            ng-model="dogText.breed">
+                        </div>
+                    </div> <!--end header-->
+
+                    <!--Display Dog Info-->
+                    <div id="content">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" ng-click="sortBy='breed';reverse=!reverse">Breed<i class="fas fa-sort"></i></th>
+                                    <th scope="col" ng-click="sortBy='description';reverse=!reverse">Description<i class="fas fa-sort"></i></th>
+                                    <th scope="col" ng-click="sortBy='size';reverse=!reverse">Size<i class="fas fa-sort"></i></th>
+                                    <th scope="col" ng-click="sortBy='lifespan';reverse=!reverse">Lifespan<i class="fas fa-sort"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr scope="row" ng-repeat="dog in data | filter:dogText | orderBy:sortBy:reverse">
+                                    <td>{{ dog.breed }}</td>
+                                    <td>{{ dog.description }}</td>
+                                    <td>{{ dog.size }}</td>
+                                    <td>{{ dog.lifespan }}</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                        <!--Name:
+                        <br>
+                        Description:
+                        <br>
+                        Size:
+                        <br>
+                        Lifespan:-->
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> <!--end container-->
+
+    </body>
+    
+    <script src="app/dogs.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controller/mainController.js"></script>
+
+</html>
+
