@@ -5,7 +5,8 @@
             apiKey:'5b91bfe419af4a22fafd4c52'}
         }).then(function success(response){
             console.log("$http Success");
-            $scope.data = dogData;
+            console.log(response);
+            $scope.data = response.data;
         }, function failure(response){
             console.log("$http Failure");
             $scope.data = "$http error"
