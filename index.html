@@ -2,12 +2,12 @@
 <html ng-app="pupperApp">
     <head>
         <title></title>
-        <!--Local Stylesheet-->
-        <link rel="stylesheet" href="style.css">
         <!--Font Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <!--Bootstrap 4-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--Local Stylesheet-->
+        <link rel="stylesheet" href="style.css">
 
 
         <!--restdb.io API Key: ed3327d8ae8171c89b9e81e2b2871f90ae2f0	-->
@@ -21,17 +21,6 @@
                     <h2>The Database of Pupper Information</h2>
                     
                     <div id="header" class="row">
-                        <!--Dropdown for Selecting Dog Info-->
-                        <select>
-                            <option ng-repeat="dog in data">{{ dog.breed }}</option>
-                        </select>
-
-                        <!--<div class="dropdown" class="col-sm-6">
-                            <button class="btn btn-secondary dropdown-toggle"
-                                    type="button"
-                                    id="dogDropdown">
-                            </button>
-                        </div>-->
                         <!--Text Box for Searching Dog Info-->
                         <div class="text col-sm-6">
                             <p>Type to search by breed, click on column headers to sort.</p>
