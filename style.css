@@ -3,6 +3,11 @@
     margin: auto;
 }
 
+a{
+    color: white;
+    padding: 20px 30px 20px 30px;
+}
+
 body{
     background-color: #555;
 }
