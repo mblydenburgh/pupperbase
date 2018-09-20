@@ -1,0 +1,57 @@
+*{
+    text-align: center;
+    margin: auto;
+    color: #555;
+    font-weight: 500;
+}
+
+a{
+    color: white;
+    padding: 20px 30px 20px 30px;
+}
+
+body{
+    background-color: #555;
+}
+
+.container{
+    background-color: #93B7Be;
+    margin: 50px auto auto auto;
+    border-radius: 30px;
+}
+
+#title{
+    margin-top: 1.5em;
+}
+
+#header{
+    display: inline-block;
+    width: 100%;
+}
+
+#dogText{
+    margin:10px;
+}
+
+th:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
+
+button{
+    background-color: #FFFCF7;
+    color: #4C4C47;
+    font-weight: bold;
+}
+
+input[type=text]{
+    width: 50%;
+    text-align: center;
+    margin:  5px auto 20px auto;
+}
+
+.form-control{
+    width: 50%;
+    margin: 5px auto 20px auto;
+}
