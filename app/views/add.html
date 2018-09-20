@@ -1,1 +1,38 @@
-<h1>Adding a dog!</h1>
+<p>Use the form below to add a new dog to the list</p>
+
+<form>
+    <div class="form-group">
+        <label for="dogNameInput">Breed:</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="dogNameInput" 
+            placeholder="Enter a breed name"
+            ng-model="dogBreed"
+        >
+        <label for="dogDescriptionInput">Description:</label>
+        <textarea 
+            class="form-control" 
+            id="dogDescriptionInput" 
+            rows="3" 
+            cols="35"
+            ng-model="dogInfo"
+        >
+        </textarea>
+        <label for="dogSizeInput">Size:</label>
+        <select id="dogSizeInput" ng-model="dogSize">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+        <label for="dogLifespanInput">Lifespan:</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="dogLifespanInput" 
+            placeholder="10-12 Years"
+            ng-model="dogLifespan"
+        >
+        <button type="submit" class="btn btn-primary" ng-click="addDog()">Add</button>
+    </div>  
+</form>
