@@ -12,6 +12,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col"></th>
                     <th scope="col" ng-click="sortBy='breed';reverse=!reverse">Breed<i class="fas fa-sort"></i></th>
                     <th scope="col" ng-click="sortBy='description';reverse=!reverse">Description<i class="fas fa-sort"></i></th>
                     <th scope="col" ng-click="sortBy='size';reverse=!reverse">Size<i class="fas fa-sort"></i></th>
@@ -20,6 +21,9 @@
             </thead>
             <tbody>
                 <tr scope="row" ng-repeat="dog in data | filter:dogText | orderBy:sortBy:reverse">
+                    <td><div ng-click="removeDog(dog)">
+                        <i class="fas fa-trash"></i>
+                    </div></td>
                     <td>{{ dog.breed }}</td>
                     <td>{{ dog.description }}</td>
                     <td>{{ dog.size }}</td>

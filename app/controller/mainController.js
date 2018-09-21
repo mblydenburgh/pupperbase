@@ -11,6 +11,11 @@
             console.log("$http Failure");
             $scope.data = "$http error"
         });
+
+        $scope.removeDog = function(dog){
+            $scope.dog = angular.copy(dog);
+            console.log(dog._id);
+        }
     
     }; //end mainController
 
