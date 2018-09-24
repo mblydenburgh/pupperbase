@@ -4,7 +4,7 @@
 <form ng-submit="addDog(dog)" name="form.dogForm" novalidate>
     <div class="form-group">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12">
                 <label for="dogNameInput">Breed:</label>
                 <input 
                     type="text" 
@@ -14,7 +14,7 @@
                     ng-model="dog.breed"
                 >
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12">
                     <label for="dogDescriptionInput">Description:</label>
                     <textarea 
                         class="form-control" 
@@ -50,6 +50,6 @@
         
         
         
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Add Dog</button>
     </div>  
 </form>
